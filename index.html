@@ -409,7 +409,12 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 1.15rem;
+            font-size: 20px !important; /* Enforced 20px for high readability */
+        }
+        
+        .premium-table th, .premium-table td {
+            font-size: 20px !important; /* Strict 20px for all cells across all sections */
+            padding: 14px 16px !important; /* Comfortable spacing */
         }
 
         .premium-table th {
@@ -626,7 +631,12 @@
         /* Mobile Viewport Adaptations */
         @media (max-width: 900px) {
             .premium-table {
-                min-width: 980px !important; /* Forces the table to expand beyond mobile screen, enabling horizontal scroll */
+                min-width: 1200px !important; /* Expand table min-width to prevent squeezing and enforce scroll */
+            }
+            
+            /* Enforce that cell fonts remain 20px on mobile without shrinking */
+            .premium-table th, .premium-table td {
+                font-size: 20px !important;
             }
 
             .app-container {
@@ -635,17 +645,27 @@
 
             /* Fixed top nav header that stacks on mobile */
             .sidebar {
-                height: auto;
-                position: sticky;
-                top: 0;
-                padding: 1rem;
-                background-color: #050813;
-                border-right: none;
-                border-bottom: 1px solid var(--border-card);
+                height: 165px !important; /* Fixed height for the header */
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                padding: 0.85rem 1rem !important;
+                background-color: #050813 !important;
+                border-right: none !important;
+                border-bottom: 1px solid var(--border-card) !important;
                 flex-direction: column !important;
                 align-items: stretch !important;
-                gap: 0.75rem;
-                z-index: 1000;
+                gap: 0.5rem !important;
+                z-index: 2000 !important;
+                box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6) !important;
+            }
+
+            /* Shift main content down to account for the fixed header */
+            .main-content {
+                padding-top: 190px !important; /* Large buffer to ensure content starts below the fixed menu */
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
             }
 
             .logo-area {
