@@ -36,7 +36,7 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
-            font-size: 17px; /* Increased base font size */
+            font-size: 19px; /* Base font size */
         }
 
         /* App Layout Grid */
@@ -115,7 +115,7 @@
         .footer-branding {
             border-top: 1px solid var(--border-card);
             padding-top: 1.5rem;
-            font-size: 0.85rem; /* Increased */
+            font-size: 1.05rem;
             color: var(--text-muted);
             text-align: center;
         }
@@ -237,7 +237,7 @@
 
         .dash-header h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem; /* Increased */
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             background: linear-gradient(135deg, #ffffff 0%, #b39ddb 100%);
@@ -247,7 +247,7 @@
 
         .dash-header p {
             color: var(--text-muted);
-            font-size: 1.05rem; /* Increased */
+            font-size: 1.2rem;
             margin-top: 0.25rem;
         }
 
@@ -292,7 +292,7 @@
 
         .card-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.35rem; /* Increased */
+            font-size: 1.5rem;
             font-weight: 600;
             color: #fff;
             display: flex;
@@ -353,14 +353,14 @@
 
         .kpi-value {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.1rem; /* Increased */
+            font-size: 2.5rem;
             font-weight: 700;
             color: #fff;
             line-height: 1.2;
         }
 
         .kpi-subtext {
-            font-size: 0.9rem; /* Increased */
+            font-size: 1.05rem;
             color: var(--text-muted);
             margin-top: 0.5rem;
             display: flex;
@@ -409,7 +409,7 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 1rem; /* Standardized and increased across sections */
+            font-size: 1.15rem;
         }
 
         .premium-table th {
@@ -462,13 +462,13 @@
             font-family: 'Outfit', sans-serif;
             color: #b39ddb;
             margin-bottom: 1rem;
-            font-size: 1.2rem; /* Increased */
+            font-size: 1.35rem;
             font-weight: 600;
         }
 
         .strategy-block p {
             color: var(--text-muted);
-            font-size: 1rem; /* Increased */
+            font-size: 1.15rem;
         }
 
         .note-text {
@@ -625,6 +625,10 @@
 
         /* Mobile Viewport Adaptations */
         @media (max-width: 900px) {
+            .premium-table {
+                min-width: 980px !important; /* Forces the table to expand beyond mobile screen, enabling horizontal scroll */
+            }
+
             .app-container {
                 grid-template-columns: 1fr; /* Single column flow */
             }
